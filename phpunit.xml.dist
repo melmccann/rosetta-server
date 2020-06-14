@@ -6,18 +6,19 @@
          convertWarningsToExceptions="true"
          stopOnFailure="false">
     <testsuites>
-        <testsuite name="tests">
-            <directory>./test/Api</directory>
-            <directory>./test/Model</directory>
+        <testsuite>
+            <directory>./Tests/Api</directory>
+            <directory>./Tests/Model</directory>
         </testsuite>
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./lib/melmccannosetta-server-stubs</directory>
-            <directory suffix=".php">./lib/RosettaServerStubsModel</directory>
+            <directory suffix=".php">././melmccann/rosetta-server-stubs</directory>
+            <directory suffix=".php">././RosettaServerStubsModel</directory>
         </whitelist>
     </filter>
     <php>
         <ini name="error_reporting" value="E_ALL" />
+        <server name="KERNEL_DIR" value="Tests/" />
     </php>
 </phpunit>
