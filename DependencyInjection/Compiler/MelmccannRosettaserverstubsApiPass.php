@@ -1,6 +1,6 @@
 <?php
 /**
- * MelmccannRosettaserverstubsBundleApiPass
+ * MelmccannRosettaserverstubsApiPass
  *
  * PHP version 5
  *
@@ -34,14 +34,14 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;
 
 /**
- * MelmccannRosettaserverstubsBundleApiPass Class Doc Comment
+ * MelmccannRosettaserverstubsApiPass Class Doc Comment
  *
  * @category Class
  * @package  melmccann\rosettaserverstubs\DependencyInjection\Compiler
  * @author   OpenAPI Generator team
  * @link     https://github.com/openapitools/openapi-generator
  */
-class MelmccannRosettaserverstubsBundleApiPass implements CompilerPassInterface
+class MelmccannRosettaserverstubsApiPass implements CompilerPassInterface
 {
 
     /**

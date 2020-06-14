@@ -1,6 +1,6 @@
 <?php
 /**
- * MelmccannRosettaserverstubsBundleExtension
+ * MelmccannRosettaserverstubsExtension
  *
  * PHP version 5
  *
@@ -35,14 +35,14 @@ use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 /**
- * MelmccannRosettaserverstubsBundleExtension Class Doc Comment
+ * MelmccannRosettaserverstubsExtension Class Doc Comment
  *
  * @category Class
  * @package  melmccann\rosettaserverstubs\DependencyInjection
  * @author   OpenAPI Generator team
  * @link     https://github.com/openapitools/openapi-generator
  */
-class MelmccannRosettaserverstubsBundleExtension extends Extension
+class MelmccannRosettaserverstubsExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container)
     {

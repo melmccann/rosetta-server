@@ -1,6 +1,6 @@
 <?php
 /**
- * MelmccannRosettaserverstubsBundleBundle
+ * MelmccannRosettaserverstubsBundle
  *
  * PHP version 5
  *
@@ -31,20 +31,20 @@ namespace melmccann\rosettaserverstubs;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use melmccann\rosettaserverstubs\DependencyInjection\Compiler\MelmccannRosettaserverstubsBundleApiPass;
+use melmccann\rosettaserverstubs\DependencyInjection\Compiler\MelmccannRosettaserverstubsApiPass;
 
 /**
- * MelmccannRosettaserverstubsBundleBundle Class Doc Comment
+ * MelmccannRosettaserverstubsBundle Class Doc Comment
  *
  * @category Class
  * @package  melmccann\rosettaserverstubs
  * @author   OpenAPI Generator team
  * @link     https://github.com/openapitools/openapi-generator
  */
-class MelmccannRosettaserverstubsBundleBundle extends Bundle
+class MelmccannRosettaserverstubsBundle extends Bundle
 {
     public function build(ContainerBuilder $container)
     {
-        $container->addCompilerPass(new MelmccannRosettaserverstubsBundleApiPass());
+        $container->addCompilerPass(new MelmccannRosettaserverstubsApiPass());
     }
 }
