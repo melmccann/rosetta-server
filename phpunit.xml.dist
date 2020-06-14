@@ -13,8 +13,8 @@
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">././melmccann/rosetta-server-stubs</directory>
-            <directory suffix=".php">././RosettaServerStubsModel</directory>
+            <directory suffix=".php">././Api</directory>
+            <directory suffix=".php">././Model</directory>
         </whitelist>
     </filter>
     <php>

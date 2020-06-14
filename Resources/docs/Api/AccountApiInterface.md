@@ -1,4 +1,4 @@
-# melmccann\rosettaserverstubs\melmccann\rosetta-server-stubs\AccountApiInterface
+# melmccann\rosettaserverstubs\Api\AccountApiInterface
 
 All URIs are relative to *http://localhost*
 
@@ -20,7 +20,7 @@ services:
 ```
 
 ## **accountBalance**
-> melmccann\rosettaserverstubs\RosettaServerStubsModel\AccountBalanceResponse accountBalance($accountBalanceRequest)
+> melmccann\rosettaserverstubs\Model\AccountBalanceResponse accountBalance($accountBalanceRequest)
 
 Get an Account Balance
 
@@ -33,7 +33,7 @@ Get an array of all Account Balances for an Account Identifier and the Block Ide
 
 namespace Acme\MyBundle\Api;
 
-use melmccann\rosettaserverstubs\melmccann\rosetta-server-stubs\AccountApiInterface;
+use melmccann\rosettaserverstubs\Api\AccountApiInterface;
 
 class AccountApi implements AccountApiInterface
 {
@@ -56,11 +56,11 @@ class AccountApi implements AccountApiInterface
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accountBalanceRequest** | [**melmccann\rosettaserverstubs\RosettaServerStubsModel\AccountBalanceRequest**](../Model/AccountBalanceRequest.md)|  |
+ **accountBalanceRequest** | [**melmccann\rosettaserverstubs\Model\AccountBalanceRequest**](../Model/AccountBalanceRequest.md)|  |
 
 ### Return type
 
-[**melmccann\rosettaserverstubs\RosettaServerStubsModel\AccountBalanceResponse**](../Model/AccountBalanceResponse.md)
+[**melmccann\rosettaserverstubs\Model\AccountBalanceResponse**](../Model/AccountBalanceResponse.md)
 
 ### Authorization
 

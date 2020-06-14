@@ -35,12 +35,12 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\Validator\Constraints as Assert;
-use melmccann\rosettaserverstubs\melmccann\rosetta-server-stubs\BlockApiInterface;
-use melmccann\rosettaserverstubs\RosettaServerStubsModel\BlockRequest;
-use melmccann\rosettaserverstubs\RosettaServerStubsModel\BlockResponse;
-use melmccann\rosettaserverstubs\RosettaServerStubsModel\BlockTransactionRequest;
-use melmccann\rosettaserverstubs\RosettaServerStubsModel\BlockTransactionResponse;
-use melmccann\rosettaserverstubs\RosettaServerStubsModel\Error;
+use melmccann\rosettaserverstubs\Api\BlockApiInterface;
+use melmccann\rosettaserverstubs\Model\BlockRequest;
+use melmccann\rosettaserverstubs\Model\BlockResponse;
+use melmccann\rosettaserverstubs\Model\BlockTransactionRequest;
+use melmccann\rosettaserverstubs\Model\BlockTransactionResponse;
+use melmccann\rosettaserverstubs\Model\Error;
 
 /**
  * BlockController Class Doc Comment
@@ -89,7 +89,7 @@ class BlockController extends Controller
 
         // Deserialize the input values that needs it
         try {
-            $blockRequest = $this->deserialize($blockRequest, 'melmccann\rosettaserverstubs\RosettaServerStubsModel\BlockRequest', $inputFormat);
+            $blockRequest = $this->deserialize($blockRequest, 'melmccann\rosettaserverstubs\Model\BlockRequest', $inputFormat);
         } catch (SerializerRuntimeException $exception) {
             return $this->createBadRequestResponse($exception->getMessage());
         }
@@ -97,7 +97,7 @@ class BlockController extends Controller
         // Validate the input values
         $asserts = [];
         $asserts[] = new Assert\NotNull();
-        $asserts[] = new Assert\Type("melmccann\rosettaserverstubs\RosettaServerStubsModel\BlockRequest");
+        $asserts[] = new Assert\Type("melmccann\rosettaserverstubs\Model\BlockRequest");
         $asserts[] = new Assert\Valid();
         $response = $this->validate($blockRequest, $asserts);
         if ($response instanceof Response) {
@@ -179,7 +179,7 @@ class BlockController extends Controller
 
         // Deserialize the input values that needs it
         try {
-            $blockTransactionRequest = $this->deserialize($blockTransactionRequest, 'melmccann\rosettaserverstubs\RosettaServerStubsModel\BlockTransactionRequest', $inputFormat);
+            $blockTransactionRequest = $this->deserialize($blockTransactionRequest, 'melmccann\rosettaserverstubs\Model\BlockTransactionRequest', $inputFormat);
         } catch (SerializerRuntimeException $exception) {
             return $this->createBadRequestResponse($exception->getMessage());
         }
@@ -187,7 +187,7 @@ class BlockController extends Controller
         // Validate the input values
         $asserts = [];
         $asserts[] = new Assert\NotNull();
-        $asserts[] = new Assert\Type("melmccann\rosettaserverstubs\RosettaServerStubsModel\BlockTransactionRequest");
+        $asserts[] = new Assert\Type("melmccann\rosettaserverstubs\Model\BlockTransactionRequest");
         $asserts[] = new Assert\Valid();
         $response = $this->validate($blockTransactionRequest, $asserts);
         if ($response instanceof Response) {

@@ -35,12 +35,12 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\Validator\Constraints as Assert;
-use melmccann\rosettaserverstubs\melmccann\rosetta-server-stubs\MempoolApiInterface;
-use melmccann\rosettaserverstubs\RosettaServerStubsModel\Error;
-use melmccann\rosettaserverstubs\RosettaServerStubsModel\MempoolRequest;
-use melmccann\rosettaserverstubs\RosettaServerStubsModel\MempoolResponse;
-use melmccann\rosettaserverstubs\RosettaServerStubsModel\MempoolTransactionRequest;
-use melmccann\rosettaserverstubs\RosettaServerStubsModel\MempoolTransactionResponse;
+use melmccann\rosettaserverstubs\Api\MempoolApiInterface;
+use melmccann\rosettaserverstubs\Model\Error;
+use melmccann\rosettaserverstubs\Model\MempoolRequest;
+use melmccann\rosettaserverstubs\Model\MempoolResponse;
+use melmccann\rosettaserverstubs\Model\MempoolTransactionRequest;
+use melmccann\rosettaserverstubs\Model\MempoolTransactionResponse;
 
 /**
  * MempoolController Class Doc Comment
@@ -89,7 +89,7 @@ class MempoolController extends Controller
 
         // Deserialize the input values that needs it
         try {
-            $mempoolRequest = $this->deserialize($mempoolRequest, 'melmccann\rosettaserverstubs\RosettaServerStubsModel\MempoolRequest', $inputFormat);
+            $mempoolRequest = $this->deserialize($mempoolRequest, 'melmccann\rosettaserverstubs\Model\MempoolRequest', $inputFormat);
         } catch (SerializerRuntimeException $exception) {
             return $this->createBadRequestResponse($exception->getMessage());
         }
@@ -97,7 +97,7 @@ class MempoolController extends Controller
         // Validate the input values
         $asserts = [];
         $asserts[] = new Assert\NotNull();
-        $asserts[] = new Assert\Type("melmccann\rosettaserverstubs\RosettaServerStubsModel\MempoolRequest");
+        $asserts[] = new Assert\Type("melmccann\rosettaserverstubs\Model\MempoolRequest");
         $asserts[] = new Assert\Valid();
         $response = $this->validate($mempoolRequest, $asserts);
         if ($response instanceof Response) {
@@ -179,7 +179,7 @@ class MempoolController extends Controller
 
         // Deserialize the input values that needs it
         try {
-            $mempoolTransactionRequest = $this->deserialize($mempoolTransactionRequest, 'melmccann\rosettaserverstubs\RosettaServerStubsModel\MempoolTransactionRequest', $inputFormat);
+            $mempoolTransactionRequest = $this->deserialize($mempoolTransactionRequest, 'melmccann\rosettaserverstubs\Model\MempoolTransactionRequest', $inputFormat);
         } catch (SerializerRuntimeException $exception) {
             return $this->createBadRequestResponse($exception->getMessage());
         }
@@ -187,7 +187,7 @@ class MempoolController extends Controller
         // Validate the input values
         $asserts = [];
         $asserts[] = new Assert\NotNull();
-        $asserts[] = new Assert\Type("melmccann\rosettaserverstubs\RosettaServerStubsModel\MempoolTransactionRequest");
+        $asserts[] = new Assert\Type("melmccann\rosettaserverstubs\Model\MempoolTransactionRequest");
         $asserts[] = new Assert\Valid();
         $response = $this->validate($mempoolTransactionRequest, $asserts);
         if ($response instanceof Response) {

@@ -27,7 +27,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace melmccann\rosettaserverstubs\RosettaServerStubsModel;
+namespace melmccann\rosettaserverstubs\Model;
 
 /**
  * PeerTest Class Doc Comment

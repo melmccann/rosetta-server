@@ -1,4 +1,4 @@
-# melmccann\rosettaserverstubs\melmccann\rosetta-server-stubs\NetworkApiInterface
+# melmccann\rosettaserverstubs\Api\NetworkApiInterface
 
 All URIs are relative to *http://localhost*
 
@@ -22,7 +22,7 @@ services:
 ```
 
 ## **networkList**
-> melmccann\rosettaserverstubs\RosettaServerStubsModel\NetworkListResponse networkList($metadataRequest)
+> melmccann\rosettaserverstubs\Model\NetworkListResponse networkList($metadataRequest)
 
 Get List of Available Networks
 
@@ -35,7 +35,7 @@ This endpoint returns a list of NetworkIdentifiers that the Rosetta server can h
 
 namespace Acme\MyBundle\Api;
 
-use melmccann\rosettaserverstubs\melmccann\rosetta-server-stubs\NetworkApiInterface;
+use melmccann\rosettaserverstubs\Api\NetworkApiInterface;
 
 class NetworkApi implements NetworkApiInterface
 {
@@ -58,11 +58,11 @@ class NetworkApi implements NetworkApiInterface
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **metadataRequest** | [**melmccann\rosettaserverstubs\RosettaServerStubsModel\MetadataRequest**](../Model/MetadataRequest.md)|  |
+ **metadataRequest** | [**melmccann\rosettaserverstubs\Model\MetadataRequest**](../Model/MetadataRequest.md)|  |
 
 ### Return type
 
-[**melmccann\rosettaserverstubs\RosettaServerStubsModel\NetworkListResponse**](../Model/NetworkListResponse.md)
+[**melmccann\rosettaserverstubs\Model\NetworkListResponse**](../Model/NetworkListResponse.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 ## **networkOptions**
-> melmccann\rosettaserverstubs\RosettaServerStubsModel\NetworkOptionsResponse networkOptions($networkRequest)
+> melmccann\rosettaserverstubs\Model\NetworkOptionsResponse networkOptions($networkRequest)
 
 Get Network Options
 
@@ -89,7 +89,7 @@ This endpoint returns the version information and allowed network-specific types
 
 namespace Acme\MyBundle\Api;
 
-use melmccann\rosettaserverstubs\melmccann\rosetta-server-stubs\NetworkApiInterface;
+use melmccann\rosettaserverstubs\Api\NetworkApiInterface;
 
 class NetworkApi implements NetworkApiInterface
 {
@@ -112,11 +112,11 @@ class NetworkApi implements NetworkApiInterface
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **networkRequest** | [**melmccann\rosettaserverstubs\RosettaServerStubsModel\NetworkRequest**](../Model/NetworkRequest.md)|  |
+ **networkRequest** | [**melmccann\rosettaserverstubs\Model\NetworkRequest**](../Model/NetworkRequest.md)|  |
 
 ### Return type
 
-[**melmccann\rosettaserverstubs\RosettaServerStubsModel\NetworkOptionsResponse**](../Model/NetworkOptionsResponse.md)
+[**melmccann\rosettaserverstubs\Model\NetworkOptionsResponse**](../Model/NetworkOptionsResponse.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 ## **networkStatus**
-> melmccann\rosettaserverstubs\RosettaServerStubsModel\NetworkStatusResponse networkStatus($networkRequest)
+> melmccann\rosettaserverstubs\Model\NetworkStatusResponse networkStatus($networkRequest)
 
 Get Network Status
 
@@ -143,7 +143,7 @@ This endpoint returns the current status of the network requested. Any NetworkId
 
 namespace Acme\MyBundle\Api;
 
-use melmccann\rosettaserverstubs\melmccann\rosetta-server-stubs\NetworkApiInterface;
+use melmccann\rosettaserverstubs\Api\NetworkApiInterface;
 
 class NetworkApi implements NetworkApiInterface
 {
@@ -166,11 +166,11 @@ class NetworkApi implements NetworkApiInterface
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **networkRequest** | [**melmccann\rosettaserverstubs\RosettaServerStubsModel\NetworkRequest**](../Model/NetworkRequest.md)|  |
+ **networkRequest** | [**melmccann\rosettaserverstubs\Model\NetworkRequest**](../Model/NetworkRequest.md)|  |
 
 ### Return type
 
-[**melmccann\rosettaserverstubs\RosettaServerStubsModel\NetworkStatusResponse**](../Model/NetworkStatusResponse.md)
+[**melmccann\rosettaserverstubs\Model\NetworkStatusResponse**](../Model/NetworkStatusResponse.md)
 
 ### Authorization
 

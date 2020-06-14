@@ -8,10 +8,10 @@ parameters:
 
 services:
     open_api_server.api.api_server:
-        class: melmccann\rosettaserverstubs\melmccann\rosetta-server-stubs\ApiServer
+        class: melmccann\rosettaserverstubs\Api\ApiServer
 
     open_api_server.model.model_serializer:
-        class: melmccann\rosettaserverstubs\RosettaServerStubsModel\ModelSerializer
+        class: melmccann\rosettaserverstubs\Model\ModelSerializer
 
     open_api_server.service.serializer:
         class: '%open_api_server.serializer%'

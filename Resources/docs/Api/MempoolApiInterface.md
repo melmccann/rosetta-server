@@ -1,4 +1,4 @@
-# melmccann\rosettaserverstubs\melmccann\rosetta-server-stubs\MempoolApiInterface
+# melmccann\rosettaserverstubs\Api\MempoolApiInterface
 
 All URIs are relative to *http://localhost*
 
@@ -21,7 +21,7 @@ services:
 ```
 
 ## **mempool**
-> melmccann\rosettaserverstubs\RosettaServerStubsModel\MempoolResponse mempool($mempoolRequest)
+> melmccann\rosettaserverstubs\Model\MempoolResponse mempool($mempoolRequest)
 
 Get All Mempool Transactions
 
@@ -34,7 +34,7 @@ Get all Transaction Identifiers in the mempool
 
 namespace Acme\MyBundle\Api;
 
-use melmccann\rosettaserverstubs\melmccann\rosetta-server-stubs\MempoolApiInterface;
+use melmccann\rosettaserverstubs\Api\MempoolApiInterface;
 
 class MempoolApi implements MempoolApiInterface
 {
@@ -57,11 +57,11 @@ class MempoolApi implements MempoolApiInterface
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mempoolRequest** | [**melmccann\rosettaserverstubs\RosettaServerStubsModel\MempoolRequest**](../Model/MempoolRequest.md)|  |
+ **mempoolRequest** | [**melmccann\rosettaserverstubs\Model\MempoolRequest**](../Model/MempoolRequest.md)|  |
 
 ### Return type
 
-[**melmccann\rosettaserverstubs\RosettaServerStubsModel\MempoolResponse**](../Model/MempoolResponse.md)
+[**melmccann\rosettaserverstubs\Model\MempoolResponse**](../Model/MempoolResponse.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 ## **mempoolTransaction**
-> melmccann\rosettaserverstubs\RosettaServerStubsModel\MempoolTransactionResponse mempoolTransaction($mempoolTransactionRequest)
+> melmccann\rosettaserverstubs\Model\MempoolTransactionResponse mempoolTransaction($mempoolTransactionRequest)
 
 Get a Mempool Transaction
 
@@ -88,7 +88,7 @@ Get a transaction in the mempool by its Transaction Identifier. This is a separa
 
 namespace Acme\MyBundle\Api;
 
-use melmccann\rosettaserverstubs\melmccann\rosetta-server-stubs\MempoolApiInterface;
+use melmccann\rosettaserverstubs\Api\MempoolApiInterface;
 
 class MempoolApi implements MempoolApiInterface
 {
@@ -111,11 +111,11 @@ class MempoolApi implements MempoolApiInterface
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mempoolTransactionRequest** | [**melmccann\rosettaserverstubs\RosettaServerStubsModel\MempoolTransactionRequest**](../Model/MempoolTransactionRequest.md)|  |
+ **mempoolTransactionRequest** | [**melmccann\rosettaserverstubs\Model\MempoolTransactionRequest**](../Model/MempoolTransactionRequest.md)|  |
 
 ### Return type
 
-[**melmccann\rosettaserverstubs\RosettaServerStubsModel\MempoolTransactionResponse**](../Model/MempoolTransactionResponse.md)
+[**melmccann\rosettaserverstubs\Model\MempoolTransactionResponse**](../Model/MempoolTransactionResponse.md)
 
 ### Authorization
 

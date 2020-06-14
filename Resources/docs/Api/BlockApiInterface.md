@@ -1,4 +1,4 @@
-# melmccann\rosettaserverstubs\melmccann\rosetta-server-stubs\BlockApiInterface
+# melmccann\rosettaserverstubs\Api\BlockApiInterface
 
 All URIs are relative to *http://localhost*
 
@@ -21,7 +21,7 @@ services:
 ```
 
 ## **block**
-> melmccann\rosettaserverstubs\RosettaServerStubsModel\BlockResponse block($blockRequest)
+> melmccann\rosettaserverstubs\Model\BlockResponse block($blockRequest)
 
 Get a Block
 
@@ -34,7 +34,7 @@ Get a block by its Block Identifier. If transactions are returned in the same ca
 
 namespace Acme\MyBundle\Api;
 
-use melmccann\rosettaserverstubs\melmccann\rosetta-server-stubs\BlockApiInterface;
+use melmccann\rosettaserverstubs\Api\BlockApiInterface;
 
 class BlockApi implements BlockApiInterface
 {
@@ -57,11 +57,11 @@ class BlockApi implements BlockApiInterface
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **blockRequest** | [**melmccann\rosettaserverstubs\RosettaServerStubsModel\BlockRequest**](../Model/BlockRequest.md)|  |
+ **blockRequest** | [**melmccann\rosettaserverstubs\Model\BlockRequest**](../Model/BlockRequest.md)|  |
 
 ### Return type
 
-[**melmccann\rosettaserverstubs\RosettaServerStubsModel\BlockResponse**](../Model/BlockResponse.md)
+[**melmccann\rosettaserverstubs\Model\BlockResponse**](../Model/BlockResponse.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 ## **blockTransaction**
-> melmccann\rosettaserverstubs\RosettaServerStubsModel\BlockTransactionResponse blockTransaction($blockTransactionRequest)
+> melmccann\rosettaserverstubs\Model\BlockTransactionResponse blockTransaction($blockTransactionRequest)
 
 Get a Block Transaction
 
@@ -88,7 +88,7 @@ Get a transaction in a block by its Transaction Identifier. This endpoint should
 
 namespace Acme\MyBundle\Api;
 
-use melmccann\rosettaserverstubs\melmccann\rosetta-server-stubs\BlockApiInterface;
+use melmccann\rosettaserverstubs\Api\BlockApiInterface;
 
 class BlockApi implements BlockApiInterface
 {
@@ -111,11 +111,11 @@ class BlockApi implements BlockApiInterface
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **blockTransactionRequest** | [**melmccann\rosettaserverstubs\RosettaServerStubsModel\BlockTransactionRequest**](../Model/BlockTransactionRequest.md)|  |
+ **blockTransactionRequest** | [**melmccann\rosettaserverstubs\Model\BlockTransactionRequest**](../Model/BlockTransactionRequest.md)|  |
 
 ### Return type
 
-[**melmccann\rosettaserverstubs\RosettaServerStubsModel\BlockTransactionResponse**](../Model/BlockTransactionResponse.md)
+[**melmccann\rosettaserverstubs\Model\BlockTransactionResponse**](../Model/BlockTransactionResponse.md)
 
 ### Authorization
 

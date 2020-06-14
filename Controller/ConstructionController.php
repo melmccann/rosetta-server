@@ -35,12 +35,12 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\Validator\Constraints as Assert;
-use melmccann\rosettaserverstubs\melmccann\rosetta-server-stubs\ConstructionApiInterface;
-use melmccann\rosettaserverstubs\RosettaServerStubsModel\ConstructionMetadataRequest;
-use melmccann\rosettaserverstubs\RosettaServerStubsModel\ConstructionMetadataResponse;
-use melmccann\rosettaserverstubs\RosettaServerStubsModel\ConstructionSubmitRequest;
-use melmccann\rosettaserverstubs\RosettaServerStubsModel\ConstructionSubmitResponse;
-use melmccann\rosettaserverstubs\RosettaServerStubsModel\Error;
+use melmccann\rosettaserverstubs\Api\ConstructionApiInterface;
+use melmccann\rosettaserverstubs\Model\ConstructionMetadataRequest;
+use melmccann\rosettaserverstubs\Model\ConstructionMetadataResponse;
+use melmccann\rosettaserverstubs\Model\ConstructionSubmitRequest;
+use melmccann\rosettaserverstubs\Model\ConstructionSubmitResponse;
+use melmccann\rosettaserverstubs\Model\Error;
 
 /**
  * ConstructionController Class Doc Comment
@@ -89,7 +89,7 @@ class ConstructionController extends Controller
 
         // Deserialize the input values that needs it
         try {
-            $constructionMetadataRequest = $this->deserialize($constructionMetadataRequest, 'melmccann\rosettaserverstubs\RosettaServerStubsModel\ConstructionMetadataRequest', $inputFormat);
+            $constructionMetadataRequest = $this->deserialize($constructionMetadataRequest, 'melmccann\rosettaserverstubs\Model\ConstructionMetadataRequest', $inputFormat);
         } catch (SerializerRuntimeException $exception) {
             return $this->createBadRequestResponse($exception->getMessage());
         }
@@ -97,7 +97,7 @@ class ConstructionController extends Controller
         // Validate the input values
         $asserts = [];
         $asserts[] = new Assert\NotNull();
-        $asserts[] = new Assert\Type("melmccann\rosettaserverstubs\RosettaServerStubsModel\ConstructionMetadataRequest");
+        $asserts[] = new Assert\Type("melmccann\rosettaserverstubs\Model\ConstructionMetadataRequest");
         $asserts[] = new Assert\Valid();
         $response = $this->validate($constructionMetadataRequest, $asserts);
         if ($response instanceof Response) {
@@ -179,7 +179,7 @@ class ConstructionController extends Controller
 
         // Deserialize the input values that needs it
         try {
-            $constructionSubmitRequest = $this->deserialize($constructionSubmitRequest, 'melmccann\rosettaserverstubs\RosettaServerStubsModel\ConstructionSubmitRequest', $inputFormat);
+            $constructionSubmitRequest = $this->deserialize($constructionSubmitRequest, 'melmccann\rosettaserverstubs\Model\ConstructionSubmitRequest', $inputFormat);
         } catch (SerializerRuntimeException $exception) {
             return $this->createBadRequestResponse($exception->getMessage());
         }
@@ -187,7 +187,7 @@ class ConstructionController extends Controller
         // Validate the input values
         $asserts = [];
         $asserts[] = new Assert\NotNull();
-        $asserts[] = new Assert\Type("melmccann\rosettaserverstubs\RosettaServerStubsModel\ConstructionSubmitRequest");
+        $asserts[] = new Assert\Type("melmccann\rosettaserverstubs\Model\ConstructionSubmitRequest");
         $asserts[] = new Assert\Valid();
         $response = $this->validate($constructionSubmitRequest, $asserts);
         if ($response instanceof Response) {

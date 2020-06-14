@@ -35,13 +35,13 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\Validator\Constraints as Assert;
-use melmccann\rosettaserverstubs\melmccann\rosetta-server-stubs\NetworkApiInterface;
-use melmccann\rosettaserverstubs\RosettaServerStubsModel\Error;
-use melmccann\rosettaserverstubs\RosettaServerStubsModel\MetadataRequest;
-use melmccann\rosettaserverstubs\RosettaServerStubsModel\NetworkListResponse;
-use melmccann\rosettaserverstubs\RosettaServerStubsModel\NetworkOptionsResponse;
-use melmccann\rosettaserverstubs\RosettaServerStubsModel\NetworkRequest;
-use melmccann\rosettaserverstubs\RosettaServerStubsModel\NetworkStatusResponse;
+use melmccann\rosettaserverstubs\Api\NetworkApiInterface;
+use melmccann\rosettaserverstubs\Model\Error;
+use melmccann\rosettaserverstubs\Model\MetadataRequest;
+use melmccann\rosettaserverstubs\Model\NetworkListResponse;
+use melmccann\rosettaserverstubs\Model\NetworkOptionsResponse;
+use melmccann\rosettaserverstubs\Model\NetworkRequest;
+use melmccann\rosettaserverstubs\Model\NetworkStatusResponse;
 
 /**
  * NetworkController Class Doc Comment
@@ -90,7 +90,7 @@ class NetworkController extends Controller
 
         // Deserialize the input values that needs it
         try {
-            $metadataRequest = $this->deserialize($metadataRequest, 'melmccann\rosettaserverstubs\RosettaServerStubsModel\MetadataRequest', $inputFormat);
+            $metadataRequest = $this->deserialize($metadataRequest, 'melmccann\rosettaserverstubs\Model\MetadataRequest', $inputFormat);
         } catch (SerializerRuntimeException $exception) {
             return $this->createBadRequestResponse($exception->getMessage());
         }
@@ -98,7 +98,7 @@ class NetworkController extends Controller
         // Validate the input values
         $asserts = [];
         $asserts[] = new Assert\NotNull();
-        $asserts[] = new Assert\Type("melmccann\rosettaserverstubs\RosettaServerStubsModel\MetadataRequest");
+        $asserts[] = new Assert\Type("melmccann\rosettaserverstubs\Model\MetadataRequest");
         $asserts[] = new Assert\Valid();
         $response = $this->validate($metadataRequest, $asserts);
         if ($response instanceof Response) {
@@ -180,7 +180,7 @@ class NetworkController extends Controller
 
         // Deserialize the input values that needs it
         try {
-            $networkRequest = $this->deserialize($networkRequest, 'melmccann\rosettaserverstubs\RosettaServerStubsModel\NetworkRequest', $inputFormat);
+            $networkRequest = $this->deserialize($networkRequest, 'melmccann\rosettaserverstubs\Model\NetworkRequest', $inputFormat);
         } catch (SerializerRuntimeException $exception) {
             return $this->createBadRequestResponse($exception->getMessage());
         }
@@ -188,7 +188,7 @@ class NetworkController extends Controller
         // Validate the input values
         $asserts = [];
         $asserts[] = new Assert\NotNull();
-        $asserts[] = new Assert\Type("melmccann\rosettaserverstubs\RosettaServerStubsModel\NetworkRequest");
+        $asserts[] = new Assert\Type("melmccann\rosettaserverstubs\Model\NetworkRequest");
         $asserts[] = new Assert\Valid();
         $response = $this->validate($networkRequest, $asserts);
         if ($response instanceof Response) {
@@ -270,7 +270,7 @@ class NetworkController extends Controller
 
         // Deserialize the input values that needs it
         try {
-            $networkRequest = $this->deserialize($networkRequest, 'melmccann\rosettaserverstubs\RosettaServerStubsModel\NetworkRequest', $inputFormat);
+            $networkRequest = $this->deserialize($networkRequest, 'melmccann\rosettaserverstubs\Model\NetworkRequest', $inputFormat);
         } catch (SerializerRuntimeException $exception) {
             return $this->createBadRequestResponse($exception->getMessage());
         }
@@ -278,7 +278,7 @@ class NetworkController extends Controller
         // Validate the input values
         $asserts = [];
         $asserts[] = new Assert\NotNull();
-        $asserts[] = new Assert\Type("melmccann\rosettaserverstubs\RosettaServerStubsModel\NetworkRequest");
+        $asserts[] = new Assert\Type("melmccann\rosettaserverstubs\Model\NetworkRequest");
         $asserts[] = new Assert\Valid();
         $response = $this->validate($networkRequest, $asserts);
         if ($response instanceof Response) {

@@ -1,4 +1,4 @@
-# melmccann\rosettaserverstubs\melmccann\rosetta-server-stubs\ConstructionApiInterface
+# melmccann\rosettaserverstubs\Api\ConstructionApiInterface
 
 All URIs are relative to *http://localhost*
 
@@ -21,7 +21,7 @@ services:
 ```
 
 ## **constructionMetadata**
-> melmccann\rosettaserverstubs\RosettaServerStubsModel\ConstructionMetadataResponse constructionMetadata($constructionMetadataRequest)
+> melmccann\rosettaserverstubs\Model\ConstructionMetadataResponse constructionMetadata($constructionMetadataRequest)
 
 Get Transaction Construction Metadata
 
@@ -34,7 +34,7 @@ Get any information required to construct a transaction for a specific network. 
 
 namespace Acme\MyBundle\Api;
 
-use melmccann\rosettaserverstubs\melmccann\rosetta-server-stubs\ConstructionApiInterface;
+use melmccann\rosettaserverstubs\Api\ConstructionApiInterface;
 
 class ConstructionApi implements ConstructionApiInterface
 {
@@ -57,11 +57,11 @@ class ConstructionApi implements ConstructionApiInterface
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **constructionMetadataRequest** | [**melmccann\rosettaserverstubs\RosettaServerStubsModel\ConstructionMetadataRequest**](../Model/ConstructionMetadataRequest.md)|  |
+ **constructionMetadataRequest** | [**melmccann\rosettaserverstubs\Model\ConstructionMetadataRequest**](../Model/ConstructionMetadataRequest.md)|  |
 
 ### Return type
 
-[**melmccann\rosettaserverstubs\RosettaServerStubsModel\ConstructionMetadataResponse**](../Model/ConstructionMetadataResponse.md)
+[**melmccann\rosettaserverstubs\Model\ConstructionMetadataResponse**](../Model/ConstructionMetadataResponse.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 ## **constructionSubmit**
-> melmccann\rosettaserverstubs\RosettaServerStubsModel\ConstructionSubmitResponse constructionSubmit($constructionSubmitRequest)
+> melmccann\rosettaserverstubs\Model\ConstructionSubmitResponse constructionSubmit($constructionSubmitRequest)
 
 Submit a Signed Transaction
 
@@ -88,7 +88,7 @@ Submit a pre-signed transaction to the node. This call should not block on the t
 
 namespace Acme\MyBundle\Api;
 
-use melmccann\rosettaserverstubs\melmccann\rosetta-server-stubs\ConstructionApiInterface;
+use melmccann\rosettaserverstubs\Api\ConstructionApiInterface;
 
 class ConstructionApi implements ConstructionApiInterface
 {
@@ -111,11 +111,11 @@ class ConstructionApi implements ConstructionApiInterface
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **constructionSubmitRequest** | [**melmccann\rosettaserverstubs\RosettaServerStubsModel\ConstructionSubmitRequest**](../Model/ConstructionSubmitRequest.md)|  |
+ **constructionSubmitRequest** | [**melmccann\rosettaserverstubs\Model\ConstructionSubmitRequest**](../Model/ConstructionSubmitRequest.md)|  |
 
 ### Return type
 
-[**melmccann\rosettaserverstubs\RosettaServerStubsModel\ConstructionSubmitResponse**](../Model/ConstructionSubmitResponse.md)
+[**melmccann\rosettaserverstubs\Model\ConstructionSubmitResponse**](../Model/ConstructionSubmitResponse.md)
 
 ### Authorization
 

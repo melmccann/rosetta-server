@@ -27,7 +27,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace melmccann\rosettaserverstubs\RosettaServerStubsModel;
+namespace melmccann\rosettaserverstubs\Model;
 
 /**
  * ConstructionMetadataResponseTest Class Doc Comment

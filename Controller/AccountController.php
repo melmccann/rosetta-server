@@ -35,10 +35,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\Validator\Constraints as Assert;
-use melmccann\rosettaserverstubs\melmccann\rosetta-server-stubs\AccountApiInterface;
-use melmccann\rosettaserverstubs\RosettaServerStubsModel\AccountBalanceRequest;
-use melmccann\rosettaserverstubs\RosettaServerStubsModel\AccountBalanceResponse;
-use melmccann\rosettaserverstubs\RosettaServerStubsModel\Error;
+use melmccann\rosettaserverstubs\Api\AccountApiInterface;
+use melmccann\rosettaserverstubs\Model\AccountBalanceRequest;
+use melmccann\rosettaserverstubs\Model\AccountBalanceResponse;
+use melmccann\rosettaserverstubs\Model\Error;
 
 /**
  * AccountController Class Doc Comment
@@ -87,7 +87,7 @@ class AccountController extends Controller
 
         // Deserialize the input values that needs it
         try {
-            $accountBalanceRequest = $this->deserialize($accountBalanceRequest, 'melmccann\rosettaserverstubs\RosettaServerStubsModel\AccountBalanceRequest', $inputFormat);
+            $accountBalanceRequest = $this->deserialize($accountBalanceRequest, 'melmccann\rosettaserverstubs\Model\AccountBalanceRequest', $inputFormat);
         } catch (SerializerRuntimeException $exception) {
             return $this->createBadRequestResponse($exception->getMessage());
         }
@@ -95,7 +95,7 @@ class AccountController extends Controller
         // Validate the input values
         $asserts = [];
         $asserts[] = new Assert\NotNull();
-        $asserts[] = new Assert\Type("melmccann\rosettaserverstubs\RosettaServerStubsModel\AccountBalanceRequest");
+        $asserts[] = new Assert\Type("melmccann\rosettaserverstubs\Model\AccountBalanceRequest");
         $asserts[] = new Assert\Valid();
         $response = $this->validate($accountBalanceRequest, $asserts);
         if ($response instanceof Response) {
