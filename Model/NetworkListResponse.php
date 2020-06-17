@@ -80,7 +80,7 @@ class NetworkListResponse
      *
      * @return $this
      */
-    public function setNetworkIdentifiers(array $networkIdentifiers): array
+    public function setNetworkIdentifiers(array $networkIdentifiers)
     {
         $this->networkIdentifiers = $networkIdentifiers;
 
