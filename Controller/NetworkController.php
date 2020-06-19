@@ -278,8 +278,8 @@ class NetworkController extends Controller
         // Validate the input values
         $asserts = [];
         $asserts[] = new Assert\NotNull();
-        $asserts[] = new Assert\Type("melmccann\rosettaserverstubs\Model\NetworkRequest");
-        $asserts[] = new Assert\Valid();
+//        $asserts[] = new Assert\Type("melmccann\rosettaserverstubs\Model\NetworkRequest");
+//        $asserts[] = new Assert\Valid();
         $response = $this->validate($networkRequest, $asserts);
         if ($response instanceof Response) {
             return $response;
